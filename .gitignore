@@ -4,3 +4,8 @@ node_modules/*
 public/app/bower_components/*
 *.kate-swp
 public/app/records/*
+odfe_lib/*
+*.swp
+*.log
+input/*
+*.jar
