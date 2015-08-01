@@ -1,0 +1,55 @@
+extends helplayout
+
+block content
+  div.jumbotron
+    h1=title
+  .col-md-6
+        h2 Shows the elements and attributes used for each of the ODF namespaces.
+        ul.list-group
+          li.list-group-item 
+            h3 Sidebar Shows
+            ul
+              li The names of the contibuting documents (now with crude cursors)
+              li The extract name - tells you when it was run
+              li A reminder as to the mode of the run e.g. Aggregation
+          li.list-group-item 
+            h2 Main Body
+            ul.list-group
+              li.list-group-item 
+                h3 A Namespace Summary Table
+                p Lists the namespaces defined in the schema and summarises the elements and attributes covered by the extract.
+                p For an aggregation run the summary is cumulative across the runs to the one you are examining.
+                p.
+                   And for a multi document aggregation, there is a crude cursor mechanism through which the differences between specific documents 
+                   or groups of document can be seen. The rows in the namespace with changes are highlighted. Click on a coloured document name, they move up and down.
+                   Green is the start and the yucky brown/orange is the end. Play and you'll see what I mean.
+                p 
+                  b Note:
+                  |  the 
+                  em Element Count
+                  |  and 
+                  em Num Attributes
+                  |  are derived from the ODF schema.
+                p The Coverage percentage values are calculated from the number of elements or attributes hit within a given namespace.
+                p The 
+                  em Avg Attributes/Element 
+                  | is there... just because it is and seemed interesting to me at the time.
+              li.list-group-item 
+                h3 Drill-down Table of the hits
+                p The drill-down table details hits found on each namespace element and attribute.
+                p A drill down table is used in an effort to condense the data and allow you to find the namespace you are interested in without getting bogged down with the other data.
+                h4 What do all the pretty colours mean?
+                ul
+                  li Dark blue - cool nothing interesting here - no hits - here or below
+                  li Light blue - opened version of above
+                  li Bright yellow - something interesting below me (click to see). Namespace has elements which have been hit.
+                  li Light yellow - opened version of above 
+                  li Dark Green - all elements or attributes below have been hit. (click to see what they were)
+                  li Light Green - opened version of above
+                  li Beige - lowest level in the branch and nothing hit
+                  li Dark Red - differences below - click to find out more (only for Comparisons)
+                  li Pink -opened version of above
+                h4 What is the information in the rows
+                p The name of the namespace, element, or attribute. And a quick summary of what is below (how many hits from x elements/Attributes)
+                h4 Wow! Look at that popup box
+                p A popup shows which document made the hits. The number of hits is shown to the right of the document name.

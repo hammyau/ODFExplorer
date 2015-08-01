@@ -1,0 +1,50 @@
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<h1>Document Paths</h1>
+			<a href="/xpathtable" class="btn btn-success">What are these?</a>
+			<a href="index.html" class="btn btn-info" >Home</a>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<!--Sidebar content-->
+				<ul class="list-group">
+					<li class="list-group-item" >					
+						<h3>
+							Document
+						</h3>
+						<p>
+							{{doc}}
+						</p>
+					</li>
+					<li class="list-group-item"  >
+						<h3 >Extract</h3>
+						<p>{{extract}}</p>
+					</li>
+					<li class="list-group-item"  >
+						<h3 >Mode</h3>
+						<p>{{mode}}</p>
+					</li>
+					<li class="list-group-item"  >
+						<h3 >Number of Paths</h3>
+						<p>{{numpaths}}</p>
+					</li>
+					<li class="list-group-item"  >
+						<h3 >Max Depth</h3>
+						<p>{{maxdepth}}</p>
+					</li>
+					<li class="list-group-item"  >
+						<h3 >Min Depth</h3>
+						<p>{{mindepth}}</p>
+					</li>
+					<li class="list-group-item"  >
+						<h3 >Average Depth</h3>
+						<p>{{avgdepth}}</p>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-6">
+				<!--Body content-->
+				<div id="chart"></div>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,65 @@
+<div class="container-fluid">
+	<div class="jumbotron">
+		<h1>ODF Aggregations</h1>
+		<p>Results of aggregating a number of ODF documents</p>
+		<a href="/whatisthis" class="btn btn-success" >What is this?</a>
+		<a href="index.html" class="btn btn-info" >Home</a>
+	</div>
+	<div class="row">
+		<div class="col-md-2">
+			<!--Sidebar content-->
+			<h2>Filter and Sort</h2>
+			<div class="input-group">
+				<span title="Examples: name, '.ott'" class="input-group-addon">Filter</span>
+				<input type="text" class="form-control" ng-model="query" />
+			</div>
+<!--  			<div class="input-group">
+				<span class="input-group-addon">Sort By</span> <span
+					class="input-group"> <select class="input-group"
+					ng-model="orderProp">
+						<option value="name">Alphabetical</option>
+						<option value="age">Newest</option>
+				</select>
+				</span>
+				                               <select class="input-group" ng-model="{{orderProp}}" ng-options="prop in [Alphabetical, Newest]">{{orderProp}}</select>
+			</div>-->
+<!--			<div>
+				<h2>Process new file</h2>
+				<ul class="list-group">
+					<a  class="list-group-item" href="#input">Select and set options</a>
+				</ul>
+			</div>
+			 <form action="/process" method="post"
+enctype="multipart/form-data">
+<label for="file">Filename:</label>
+<input type="file" name="file" id="file" multiple accept="application/vnd.oasis.opendocument.text"><br>
+<input type="submit" name="submit" value="Submit">
+</form>  
+			<form action="/process" enctype="multipart/form-data" method="post">
+			    <label for="exampleInputFile">Select ODF File(s)</label>
+			    <input type="file" name="file" id="file">
+			    <p class="help-block">Example block-level help text here.</p>
+			  <input type="submit" name="submit" class="btn btn-default">Submit</input>
+			</form>-->
+		</div>
+		<div class="col-md-8">
+			<!--Body content-->
+			<h2>Processed Documents</h2>
+			<div class="row">
+				<div class="col-md-5">Document (number of runs)</div>
+				<div class="col-md-3">Last Run Date/Time</div>
+			</div>
+			<ul class="list-group">
+				<li class="list-group-item"
+					ng-repeat="doc in odfs.docs | filter:query | orderBy:orderProp">
+					<div class="row">
+						<div class="col-md-5">
+							<a href="#/run/Aggregations/{{doc.name}}">{{doc.name}} <span class="badge">{{doc.runs}}</span></a>
+						</div>
+						<div class="col-md-3">{{doc.lastMod}}</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

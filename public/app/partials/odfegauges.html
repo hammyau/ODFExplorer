@@ -1,0 +1,62 @@
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<h1>Namespace Gauges</h1>
+			<a href="/namespaces" class="btn btn-success" >What are these?</a>
+			<a href="index.html" class="btn btn-info" >Home</a>
+		</div>
+		<div class="row">
+			<div class="col-md-2">
+				<!--Sidebar content-->
+				<ul class="list-group">
+					<li class="list-group-item" >					
+						<h3>
+							Document(s)
+						</h3>
+						<p>{{namespaces[0].elementsHit.length}} {{summaryStart}} {{summaryEnd}}</p>
+						<p ng-class="getCursor($index)" ng-repeat="src in sources" ng-click="docSelected(src.docname, $index)">
+							{{src.docname}}
+						</p>
+					</li>
+					<li class="list-group-item"  >
+						<h3 >Extract</h3>
+						<p>{{extract}}</p>
+					</li>
+					<li class="list-group-item"  >
+						<h3 >Mode</h3>
+						<p>{{mode}}</p>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-6">
+				<!--Body content-->
+				<h2>Summary</h2> 
+                                <table class="table table-bordered table-condensed">
+                                        <thead>
+                                        <tr>
+                                                <th>Namespace</th>
+                                                <th>Element Count</th>
+                                                <th>Used</th>
+                                                <th>Element Coverage (%)</th>
+                                                <th>Num Attributes</th>
+                                                <th>Used</th>
+                                                <th>Attribute Coverage (%)</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr ng-repeat="ns in namespaces" class="{{getColour(ns)}}" ng-click="nsClicked(ns)">
+                                                <td ng-if="mode=='AGGREGATE'"><a title="Show Progress" 		href="#/progress/Aggregations/{{doc}}/{{extract}}" >{{ns.ns}}</a></td>
+                                                <td ng-if="mode!='AGGREGATE'">{{ns.ns}}</td>
+                                                <td>{{ns.elements}}</td>
+                                                <td>{{getElementsUsed(ns)}}</td>
+                                                <td>{{getElementPercentage(ns)}}</td>
+                                                <td>{{ns.attributes}}</td>
+                                                <td>{{getAttrsUsed(ns)}}</td>
+                                                <td>{{getAttrPercentage(ns)}}</td>
+                                        </tr>
+                                        </tbody>
+                                </table>
+                                <h2>Drilldown Table</h2>
+				<div id="chart"></div>
+			</div>
+		</div>
+	</div>

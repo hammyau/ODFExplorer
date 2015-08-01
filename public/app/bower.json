@@ -1,0 +1,25 @@
+{
+  "name": "odfe",
+  "version": "0.0.1",
+  "authors": [
+    "ianc <ianc@apache.org>"
+  ],
+  "description": "ODFExplorer",
+  "moduleType": [
+    "node"
+  ],
+  "license": "Apache 2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16",
+    "angular-route": "~1.2.x",
+    "bootstrap": "~3.1.1",
+    "d3": "~3.x"
+  }
+}

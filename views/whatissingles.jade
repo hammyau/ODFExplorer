@@ -1,0 +1,17 @@
+extends helplayout
+
+block content
+  div.jumbotron
+    h1=title
+  .col-md-6
+    p A Single document report enables a user to examine structure of a document.
+        ul.list-group
+          li.list-group-item 
+            h2 Filter
+            p Enter text into the key field and the list of processed documents will dynamically update.
+          li.list-group-item 
+            h2 Document list
+            p A table of the single documents analysed.
+            p The number of extract runs for each document shown after the document name.
+            p Click on the document name to open the extract details page.
+            p The time of the last run is shown to the right of the table.

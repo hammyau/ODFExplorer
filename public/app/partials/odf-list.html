@@ -1,0 +1,47 @@
+<div class="container-fluid">
+	<div class="jumbotron">
+		<div ng-switch="mode">
+						<h1 ng-switch-when="Singles">Single Document Reports</h1>
+						<p ng-switch-when="Singles">Results of processing an ODF document</p>
+						<h1 ng-switch-when="Aggregations">Aggregation Reports</h1>
+						<p ng-switch-when="Aggregations">Results of processing a number ODF documents</p>
+						<h1 ng-switch-when="Comparisons">Comparison Reports</h1>
+						<p ng-switch-when="Comparisons">Results of comparing ODF documents</p>
+		</div>
+		<a href="/whatisthis{{mode}}" class="btn btn-success" >Explanation</a>
+		<a href="index.html" class="btn btn-info" >Home</a>
+	</div>
+	<div class="row">
+		<div class="col-md-2">
+			<!--Sidebar content-->
+			<h2>Filter</h2>
+			<div class="input-group">
+				<span title="Examples: name, '.ott'" class="input-group-addon">Key</span>
+				<input type="text" class="form-control" ng-model="query" />
+			</div>
+		</div>
+		<div class="col-md-8">
+			<!--Body content-->
+			<div ng-switch="mode">
+				<h2 ng-switch-when="Singles">Processed Documents</h2>
+				<h2 ng-switch-when="Aggregations">Aggregations</h2>
+				<h2 ng-switch-when="Comparisons">Comparisons</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-5">Name (number of runs)</div>
+				<div class="col-md-3">Last Run Date/Time</div>
+			</div>
+			<ul class="list-group">
+				<li class="list-group-item"
+					ng-repeat="doc in odfs.docs | filter:query | orderBy:orderProp">
+					<div class="row">
+						<div class="col-md-5">
+							<a href="#/run/{{mode}}/{{doc.name}}">{{doc.name}} <span class="badge">{{doc.runs}}</span></a>
+						</div>
+						<div class="col-md-3">{{doc.lastMod}}</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

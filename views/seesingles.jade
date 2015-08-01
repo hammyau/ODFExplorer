@@ -1,0 +1,29 @@
+extends helplayout
+
+block content
+  div.jumbotron
+    h1=title
+  .col-md-6
+        ul.list-group
+          li.list-group-item 
+            h2 Filter
+            p Enter text into the key field and the list will dynamically update.
+          li.list-group-item 
+            h2 Extract Runs
+            p A table of the runs performed for a document.
+            p 
+              u Extract
+              |  is the date and time of the run. 
+              | The format is CCYY_MM_DD_HHMMSS_mmm - (mmm was needed to distinguish test runs)
+            p 
+              u Created
+              |  is the creation date of the document.
+            p 
+              u Segment
+              |  refers to the document segment selected when the run was submitted e.g the content segement only.
+            p 
+              u Note
+              |  is either an error message from the run or the comment entered as the run was submitted
+            p An extract run analyses the number of XPaths found in the document, 
+              u #Paths, Min Depth, Max Depth, and Avg Depth
+              |  provide summary statistics.

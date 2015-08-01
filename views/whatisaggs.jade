@@ -1,0 +1,17 @@
+extends helplayout
+
+block content
+  div.jumbotron
+    h1=title
+  .col-md-6
+    p An aggregation report collects the results of processing many documents, in many iterations.
+    ul.list-group
+      li.list-group-item 
+        h2 Filter
+        p Enter text into the key field and the aggregations list will dynamically update.
+      li.list-group-item 
+        h2 Aggregations
+        p A table of the aggregations performed.
+        p The number of extract runs is shown after the aggregation name.
+        p Click on the aggregation name to open the extract details page.
+        p The time of the last run is shown to the right of the table.

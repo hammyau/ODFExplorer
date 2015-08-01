@@ -1,0 +1,32 @@
+extends helplayout
+
+block content
+  div.jumbotron
+    h1=title
+  .col-md-6
+        h2 Shows style families found in a document
+        p A document may have many styles defined but only use a subset for its content.
+        ul.list-group
+          li.list-group-item 
+            h3 Sidebar Shows
+            ul
+              li The names of the aggregation, or document.
+              li The extract name - tells you when it was run
+              li A reminder as to the mode of the run e.g. Single
+          li.list-group-item 
+            h2 Main Body
+            ul.list-group
+              li.list-group-item 
+                h3 Drill down table
+                p The style families and the underlying details are presented in a drill down form.
+                p A drill down table is used in an effort to condense the data and allow you to find the style information you are interested in without getting bogged down with the other data.
+                h4 What do all the pretty colours mean?
+                ul
+                  li Blue - no used styles below
+                  li Light blue - opened version of above
+                  li Dark Green - Style information below that is used in the document - click on me
+                  li Light Green - Expanded version of above
+                  li Beige - A leaf node which shows the attributes of the style.
+                h4 What is the information in the rows?
+                p The name of the style, the number of hits on the element, and the number of child nodes in brackets.
+ 

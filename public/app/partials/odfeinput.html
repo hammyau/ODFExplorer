@@ -1,0 +1,126 @@
+<div class="container-fluid">
+	<div class="jumbotron">
+		<h1>Process a Document</h1>
+		<p>Select a document and how to process it</p>
+		<a href="/selections" class="btn btn-success">What are my options?</a> 
+		<a href="index.html" class="btn btn-info">Home</a>
+	</div>
+	<div class="row">
+		<div class="col-md-2">
+			<form action="/process" enctype="multipart/form-data" method="post">
+				<div class="panel panel-success">
+					<div class="panel-heading">Options</div>
+					<div class="panel-body">
+						<div class="form-group">
+							<label for="exampleInputEmail1">Run comment</label> <input
+								type="text" class="form-control" name="note"
+								id="exampleInputEmail1" placeholder="Enter comment">
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon">Mode</span> <select
+								class="form-control" name="mode" ng-model="mode">
+								<option value="Singles" title="Process just one ODF file">Single</option>
+								<option value="Comparisons" title="Compare two ODF files">Difference</option>
+								<option value="Aggregations"
+									title="Namespace hits for many ODF files">Aggregate</option>
+							</select> 
+						</div>
+						<div class="input-group">
+							<span class="input-group-addon">Segment</span> <select
+								class="form-control" name="depth" ng-model="depth">
+								<option value="all">All</option>
+								<option value="content">Content Only</option>
+								<option value="styles">Styles Only</option>
+								<option value="meta">Metadata Only</option>
+							</select> 
+						</div>
+						<div class="checkbox">
+							<label> <input type="checkbox" name="dropAtts" ng-disabled="mode=='Aggregations'">
+								Hide Attributes
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-success">
+					<div class="panel-heading">Selection</div>
+					<div class="panel-body" ng-switch="mode">
+						<div class="form-group" ng-switch-when="Singles">
+							<label for="exampleInputFile">Single Document</label>
+							<div class="btn btn-success btn-file">
+								Choose<input type="file" name="file1" id="file1"
+									onchange="angular.element(this).scope().filechanged(this)"
+									accept="application/vnd.oasis.opendocument.text"></input>
+							</div>
+						</div>
+						<div class="form-group" ng-switch-when="Aggregations">
+                                                        <label >Name</label> <input
+                                                                type="text" class="form-control" name="newAggName" ng-model="newAgg"
+                                                                placeholder="New Name">
+                                                        <label >Or</label>
+                                                        <span class="input-group-addon">Existing</span> 
+                                                        <select
+                                                                class="form-control" name="aggName" id="extractName" ng-model="existing" 
+                                                                ng-options="agg.name for agg in aggregates track by agg.name" ng-disabled="newAgg.length>0">
+                                                        </select> 
+							<label for="exampleInputFile">Aggregate Documents</label>
+							<div class="btn btn-warning btn-file">
+								Choose<input type="file" name="file1" id="file1"
+									onchange="angular.element(this).scope().filechanged(this)"
+									multiple></input>
+							</div>
+						</div>
+						<div ng-switch-when="Comparisons">
+							<div class="form-group">
+								<label for="exampleInputFile">Source Document</label>
+								<div class="btn btn-success btn-file">
+									Choose<input type="file" name="file1" id="file1"
+										onchange="angular.element(this).scope().filechanged(this)"></input>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="exampleInputFile">Target Document</label>
+								<div class="btn btn-warning btn-file">
+									Choose<input type="file" name="file2" id="file2"
+										onchange="angular.element(this).scope().trgfilechanged(this)">
+									</input>
+								</div>
+							</div>
+						</div>
+						<input type="submit" name="submit" class="btn btn-danger " ng-enabled="mode=='Aggregations'" >
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="col-md-6">
+			<!--Body content-->
+			<div class="panel-body" ng-switch="mode">
+				<div ng-switch-when="Singles">
+					<h2>Document To Be Processed</h2>
+					<ul class="list-group">
+						<li class="list-group-item" ng-repeat="file in angFiles ">
+							{{file}}</li>
+					</ul>
+				</div>
+				<div ng-switch-when="Aggregations">
+					<h2>Documents To Be Aggregated</h2>
+					<ul class="list-group">
+						<li class="list-group-item" ng-repeat="file in angFiles ">
+							{{file}}</li>
+					</ul>
+				</div>
+				<div ng-switch-when="Comparisons">
+					<h2>Compare Source Document</h2>
+					<ul class="list-group">
+						<li class="list-group-item" ng-repeat="file in angFiles ">
+							{{file}}</li>
+					</ul>
+					<h2>To Target Document</h2>
+					<ul class="list-group">
+						<li class="list-group-item" ng-repeat="file in trgFiles ">
+							{{file}}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

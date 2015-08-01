@@ -1,0 +1,18 @@
+extends helplayout
+
+block content
+  div.jumbotron
+    h1=title
+  .col-md-6
+        p A Comparison Report shows the results of comparing two documents.
+        ul.list-group
+          li.list-group-item 
+            h2 Filter
+            p Enter text into the key field and the comparisons list will dynamically update.
+          li.list-group-item 
+            h2 Document list
+            p A table of the comparisons performed.
+            p The name in the list is that of the base document.
+            p The number of extract runs for each comparison shown after the base document name.
+            p Click on the document name to open the extract details page.
+            p The time of the last run is shown to the right of the table.

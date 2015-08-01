@@ -1,0 +1,38 @@
+extends helplayout
+
+block content
+  div.jumbotron
+    h1=title
+  .col-md-6
+        h2 Shows a drill down table of the extract run XPaths
+        ul.list-group
+          li.list-group-item 
+            h3 Sidebar Shows
+            ul
+              li The names of the aggregation, or document.
+              li The extract name - tells you when it was run
+              li A reminder as to the mode of the run e.g. Aggregation
+              li Summary information on the number and depth or the paths
+          li.list-group-item 
+            h2 Main Body
+            ul.list-group
+              li.list-group-item 
+                h3 Drill down table
+                p The XPath drill-down table presents the tree of paths in a drill down form.
+                p A drill down table is used in an effort to condense the data and allow you to find the namespace you are interested in without getting bogged down with the other data.
+                h4 What do all the pretty colours mean?
+                p Well, that depends on the type of extract
+                h4 Aggregation
+                ul
+                  li Dark blue - no new nodes below
+                  li Light blue - opened version of above
+                  li Bright yellow - new nodes below me (click to see).
+                  li Light yellow - opened version of above 
+                  li Dark Green - An element with child nodes has been added to the tree. (click to see what they were)
+                  li Light Green - A leaf node that has been added to the tree
+                  li Beige - A leaf node found in both the previous and latest iterations. If there are no numbers there may be child nodes too.
+                  li Red - The node contains different attribute values. The entry explains what the differences were.
+                  li Pink - A leaf node found only in the previous run
+                p Hovering on an element can show the attributes of the element.
+                h4 What is the information in the rows
+                p The name of the namespace or element. For leaf nodes the number of hits on the element, and the attributes of the element.

@@ -1,0 +1,33 @@
+<div class="container-fluid">
+	<div class="jumbotron">
+		<h1>ODF Explorer</h1>
+		<p>Results of processing an ODF document</p>
+		<a href="/whatisthis" class="btn btn-success" >What is this?</a>
+		<a href="/runit" class="btn btn-warning" >How do I run it?</a>
+    <a href="/readme" class="btn btn-primary" >Ideas and Issues</a>
+    <form action="/help" enctype="multipart/form-data" method="post">
+         <input type="submit" value="ODFE Info" class="btn btn-danger " >
+    </form>
+	</div>
+	<div class="row">
+		<div class="col-md-2">
+			<div>
+				<h2>Process new file</h2>
+				<ul class="list-group">
+					<a  class="list-group-item list-group-item-warning" href="#input" >Select and set options</a>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<!--Body content-->
+			<div class="row"><h2>Or View</h2></div>
+                        <div class="row">
+                        <a href="#/mode/Aggregations/{{doc.name}}" class="btn-lg btn-success" >Aggregation Reports</a>
+                        <a href="#/mode/Singles/{{doc.name}}" class="btn-lg btn-info" >Single Document Reports</a>
+                        <a href="#/mode/Comparisons/{{doc.name}}" class="btn-lg btn-danger" >Comparison Reports</a>
+<!--                        <a href="#/mode/Conformance Checks/{{doc.name}}" class="btn-lg btn-warning" >Template Conformance Reports</a> -->
+                        </div>
+
+		</div>
+	</div>
+</div>

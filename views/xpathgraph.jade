@@ -1,0 +1,36 @@
+extends helplayout
+
+block content
+  div.jumbotron
+    h1=title
+  .col-md-6
+        h2 Shows a graph of the extract run XPaths.
+        ul.list-group
+          li.list-group-item 
+            h3 Sidebar Shows
+            ul
+              li The names of the document, aggregation, or source and target of a comparison.
+              li The extract name - tells you when it was run
+              li A reminder as to the mode of the run e.g. Aggregation
+              li Summary information on the number and depth or the paths
+              li Filter Nodes
+                p Clicking on a node in the tree adds it to the list
+                p Click on an entry in the list to remove it from the filter list
+                p XPath Changes only will select only tree branches with changes (new or different)
+                p Click on the submit button to redraw the graph, filtering out the nodes below those selected
+          li.list-group-item 
+            h2 Main Body
+            ul.list-group
+              li.list-group-item 
+                h3 XPath graph
+                p The XPath graph presents the tree of paths of the extract
+                h4 What do all the pretty colours mean?
+                p(style='white-space:pre;') 
+                  | The node colours are derived from the namespace of the element. 
+                  | I used to include a legend but the namespace is in each node "ns:element"
+                p The node shape is usually oval but
+                  ul
+                    li changed nodes are hexagonal with a red double border (Comparisons only - means the attributes were changed)
+                    li new nodes are hexagonal with a green double border
+                p Hovering on a node can show more information such as the attributes (or attribute changes) of the node. Not for aggregations.
+                

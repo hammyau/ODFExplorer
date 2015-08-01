@@ -1,0 +1,6 @@
+#to be ignored
+.Rhistory
+node_modules/*
+public/app/bower_components/*
+*.kate-swp
+public/app/records/*

@@ -1,0 +1,36 @@
+extends helplayout
+
+block content
+  div.jumbotron
+    h1=title
+  .col-md-6
+        ul.list-group
+          li.list-group-item 
+            h2 Filter
+            p Enter text into the key field and the list will dynamically update.
+          li.list-group-item 
+            h2 Extract Runs
+            p A table of the aggregation runs performed. Aggregation runs are cumulative.
+            h3 Columns
+            p 
+              u Extract
+              |  is the date and time of the run. 
+              | The format is CCYY_MM_DD_HHMMSS_mmm - (mmm was needed to distinguish test runs)
+            p 
+              u Created
+              |  is the creation date of the first document added to the aggregation. Pretty useless for aggregations.
+            p 
+              u Segment
+              |  refers to the document segment selected when the run was submitted. Always ALL for aggregations.
+            p 
+              u Note
+              |  is either an error message from the run or the comment entered as the run was submitted
+            p 
+              b Tip: 
+              em Use the comment on the "Process a Document" page to indicate the groups of documents added to your aggregations
+            p An extract run analyses the number of XPaths found in the aggregation, 
+              u #Paths, Min Depth, Max Depth, and Avg Depth
+              |  provide summary statistics on the aggregation.
+            p 
+              b Note: 
+              | For an aggregation run the number of paths is reduced since the attributes of a given element are not used to identify a node.

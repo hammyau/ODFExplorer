@@ -1,0 +1,35 @@
+extends helplayout
+
+block content
+ div.jumbotron
+  h1=title
+ .col-md-6
+  h1 The short story
+  p The ODFE Explorer is a tool aimed at ODF application developers, testers, and the plain curious.
+  ul.list-group
+   li.list-group-item 
+    h2 A schema coverage analysis tool
+    p The acceptable contents of the XML documents within an ODF document are defined by the 
+     a(href='https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office') ODF Schema 
+    p The ODF Explorer takes a document and shows the instances of each namespace element and its attribures used within the XML documents.
+   li.list-group-item 
+    h2 A document style analysis tool
+    p A document manages its styles in families.
+    p The ODF Explorer show the styles family hierachies defined and which styles are used.
+   li.list-group-item 
+    h2 A document XPath analysis tool
+    p The underlying data in an ODF document is stored as XML. 
+    p The overall structure of a document can be viewed as a tree where the route to each leaf node is an XPath.
+  h1 The longer story
+  p The tool was developed as part of a masters by research project at 
+    a(href='http://www.curtin.edu.au/') Curtin University
+    | , in Western Australia.
+  p As part of my day job I work on the development of a compiler and was investigating different techniquies for ensuring that it was being fully exercised by our test framework. To avoid IP issues applying the techniquies to ODF documents was chosen as an alternative.
+  p The heart of the research revolves around a coverage analysis approach referred to as "Production Coverage" in Amman and Offut's 
+    i Intoduction to Software Testing
+    |  where the number and variation of products from an application are compared against the possible set of products.
+  p In the case of an ODF document this equates to examining the elements and attributes of documents compared to those defined in the schema.
+  p The ODF Explorer has an internal database of what I call 'gauges' derived from the schema using an adaptation of the code in the 
+    a(href='https://incubator.apache.org/odftoolkit/index.html') Apache ODF Toolkit.
+  p The ODF toolkit is then used as the basis of opening and gaining access to the documents processed by ODF Explorer.
+  p The resulting Java program is wrapped in a Node.Js application to provide a user interface and access to the reports generated.

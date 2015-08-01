@@ -1,0 +1,38 @@
+<div class="container-fluid">
+	<div class="jumbotron">
+		<h1>Extract Details</h1>
+		<p>Examine the details from a run</p>
+		<a href="/extractselection" class="btn btn-success" >So what can I see here?</a>
+		<a href="index.html" class="btn btn-info" >Home</a>
+	</div>
+	<div class="row">
+		<div class="col-md-2">
+			<!--Sidebar content-->
+			<ul class="list-group">
+					<li class="list-group-item" >					
+						<h3>
+							Document
+						</h3>
+						<p>
+							{{odfName}}
+						</p>
+					</li>
+					<li class="list-group-item"  >
+						<h3 >Extract</h3>
+						<p>{{extract}}</p>
+					</li>
+			</ul>
+		</div>
+		<div class="col-md-6">
+			<!--Body content-->
+			<h2>Extract Results</h2>
+			<ul class="list-group">
+				<a  class="list-group-item" href="#gauges/{{mode}}/{{odfName}}/{{extract}}" ng-click="clicked('Gauges')" ng-class="{active: sel=='Gauges'}">Namespace Gauges</a>
+				<a  class="list-group-item" href="#styles/{{mode}}/{{odfName}}/{{extract}}" ng-click="clicked('Families')" ng-class="{active: sel=='Families'}">Style Families</a>
+				<a  class="list-group-item" href="#paths/{{mode}}/{{odfName}}/{{extract}}" ng-click="clicked('PathTable')" ng-class="{active: sel=='PathTable'}">XPath Table</a>
+				<a  class="list-group-item" href="#xpaths/{{mode}}/{{odfName}}/{{extract}}" ng-click="clicked('PathGraph')" ng-class="{active: sel=='PathGraph'}">XPath Graph</a>
+			</ul>
+		</div>
+	</div>
+</div>
+    

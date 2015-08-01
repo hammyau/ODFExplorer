@@ -1,0 +1,55 @@
+<div class="container-fluid">
+	<div class="jumbotron">
+		<div ng-switch="mode">
+						<h1 ng-switch-when="Singles">Document {{odfName}}</h1>
+						<p ng-switch-when="Singles">A list of the ODFE runs for {{odfName}}</p>
+						<h1 ng-switch-when="Aggregations">Aggregation {{odfName}}</h1>
+						<p ng-switch-when="Aggregations">A list of the ODFE aggregation runs for {{odfName}}</p>
+            <h1 ng-switch-when="Comparisons">Comparison to {{odfName}}</h1>
+						<p ng-switch-when="Comparisons">Results of comparing ODF documents</p>
+		</div>
+		<a href="/whatcanisee{{mode}}" class="btn btn-success" >So what can I see here?</a>
+		<a href="index.html" class="btn btn-info" >Home</a>
+	</div>
+	<div class="row">
+		<div class="col-md-2">
+			<!--Sidebar content-->
+			<h2>Filter</h2>
+			<div class="input-group">
+				<span title="Examples: name, '.ott'" class="input-group-addon">Key</span>
+				<input type="text" class="form-control" ng-model="query"/>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<!--Body content-->
+			<h2>Extract Runs</h2>
+			<table class="table table-striped table-bordered">
+				<thead>
+				<tr>
+					<th>Extract</th>
+					<th>Created</th>
+					<th>Segment</th>
+					<th>Note</th>
+					<th># Paths</th>
+					<th>Min Depth</th>
+					<th>Max Depth</th>
+					<th>Avg Depth</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr ng-repeat="run in runs | filter:query | orderBy:orderProp"	>
+					<td><a href="#doc/{{mode}}/{{odfName}}/{{run.extract}}" title="{{tooltip()}}" >{{run.extract}}</a></td>
+					<td>{{run.created}}</td>
+					<td>{{run.process}}</td>
+					<td>{{run.comment}}</td>
+					<td>{{run.numPaths}}</td>
+					<td>{{run.minDepth}}</td>
+					<td>{{run.maxDepth}}</td>
+					<td>{{run.avgDepth}}</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+    
