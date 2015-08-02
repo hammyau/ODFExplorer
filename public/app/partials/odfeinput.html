@@ -2,7 +2,7 @@
 	<div class="jumbotron">
 		<h1>Process a Document</h1>
 		<p>Select a document and how to process it</p>
-		<a href="/selections" class="btn btn-success">What are my options?</a> 
+		<a href="/selections" class="btn btn-success">What are my options?</a>
 		<a href="index.html" class="btn btn-info">Home</a>
 	</div>
 	<div class="row">
@@ -23,7 +23,7 @@
 								<option value="Comparisons" title="Compare two ODF files">Difference</option>
 								<option value="Aggregations"
 									title="Namespace hits for many ODF files">Aggregate</option>
-							</select> 
+							</select>
 						</div>
 						<div class="input-group">
 							<span class="input-group-addon">Segment</span> <select
@@ -32,7 +32,7 @@
 								<option value="content">Content Only</option>
 								<option value="styles">Styles Only</option>
 								<option value="meta">Metadata Only</option>
-							</select> 
+							</select>
 						</div>
 						<div class="checkbox">
 							<label> <input type="checkbox" name="dropAtts" ng-disabled="mode=='Aggregations'">
@@ -57,11 +57,11 @@
                                                                 type="text" class="form-control" name="newAggName" ng-model="newAgg"
                                                                 placeholder="New Name">
                                                         <label >Or</label>
-                                                        <span class="input-group-addon">Existing</span> 
+                                                        <span class="input-group-addon">Existing</span>
                                                         <select
-                                                                class="form-control" name="aggName" id="extractName" ng-model="existing" 
+                                                                class="form-control" name="aggName" id="extractName" ng-model="existing"
                                                                 ng-options="agg.name for agg in aggregates track by agg.name" ng-disabled="newAgg.length>0">
-                                                        </select> 
+                                                        </select>
 							<label for="exampleInputFile">Aggregate Documents</label>
 							<div class="btn btn-warning btn-file">
 								Choose<input type="file" name="file1" id="file1"
@@ -86,7 +86,7 @@
 								</div>
 							</div>
 						</div>
-						<input type="submit" name="submit" class="btn btn-danger " ng-enabled="mode=='Aggregations'" >
+						<input type="submit" name="submit" class="btn btn-danger " value="Submit" ng-enabled="mode=='Aggregations'" >
 					</div>
 				</div>
 			</form>
