@@ -42,8 +42,7 @@ You will see a message
 Express server listening on port 3000
 ```
 
-Open a Chrome web browser. Windows Explorer will just lead to a world of pain.   
-Firefox seems to have some issues too. I need to get onto that...   
+Open a Chrome or Firefox web browser. Windows Explorer will just lead to a world of pain.   
 I've not seen how it runs on a Mac.
 
 Go to the url localhost:3000/app/index.html
