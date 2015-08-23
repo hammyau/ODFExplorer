@@ -35,7 +35,7 @@ There it is. Click on it to get the Details.
 
 ### Details
 
-![opening]images/test1DocDetails.png)
+![opening](images/test1DocDetails.png)
 
 There is some info about this run of the document and a summary of the tree of elements that make up the document.
 63 paths with an average depth of 5. Typically documents form wide and shallow trees.

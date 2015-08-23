@@ -11,7 +11,7 @@ The ODF explorer pulls apart the document to see which elements of which a names
 The resulting summary table for our simple document is below.
 
 
-![opening](/images/test1DocNSSummary.png)
+![opening](images/test1DocNSSummary.png)
 
 We can see we have "hit" elements from the dc, office, meta, styles, and text namespaces.
 
@@ -24,4 +24,4 @@ The Drilldown table allows you to select elements and the attributes within an e
 Green means it has been hit.
 There is a handy dandy pop up which shows the document and the number of hits too. But that is more useful when comparing documents.
 
-![opening](/images/test1DocNSDrilldown.png)
+![opening](images/test1DocNSDrilldown.png)
