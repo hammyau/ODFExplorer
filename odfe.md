@@ -1,3 +1,7 @@
+---
+layout: page
+title: ODFE
+---
 ### ODF Explorer
 The ODF Explorer provides allows a user to see how much of the underlying ODF [schema](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office) is used by a document or set of documents. See the Readme in the download or code base of this project to jump straight in.
 
@@ -15,11 +19,11 @@ I guess the easiest way to show you what you get is to show some scenarios.
 
 * [Opening Page](opening.html)
 * [Create and look into a single simple document](single.html)
-* [Edit the document and compare](compare.hmtl)
+* [Edit the document and compare](compare.html)
 * [Aggregate groups of documents](aggregate.html)
 
 #### Is this thing being used anywhere?
-It is being used by your truly as the basis for a post graduate research project at [Curtin University](http://cs.curtin.edu.au/). And I will be applying it to the [Apache Corinthia](http://corinthia.incubator.apache.org/) development.
+It is being used by yours truly as the basis for a post graduate research project at [Curtin University](http://cs.curtin.edu.au/). And I will be applying it to the [Apache Corinthia](http://corinthia.incubator.apache.org/) development.
 
-#### Okay I\'m interested how do I get to use it?
+#### Okay I'm interested how do I get to use it?
 Clone the project and follow the destructions in the readme. Or download the release and do the same.
