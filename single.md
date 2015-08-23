@@ -54,7 +54,7 @@ So your now at the page which allows you to examine the innards of the document 
 
 There are four reports you can select
 
-* [Namespace Gauges](NamespacesSingle.html)
-* [Style Families](StyleFamiliesSingle.html)
-* [XPath Table](XPathTableSingle.html)
-* [XPath Graph](XPathGraphSingle.html)
+* [Namespace Gauges](NamespacesSingle.md)
+* [Style Families](StyleFamiliesSingle.md)
+* [XPath Table](XPathTableSingle.md)
+* [XPath Graph](XPathGraphSingle.md)
