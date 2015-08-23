@@ -13,10 +13,10 @@ The server was created to provide a graphical framework (I'm not a GUI designer)
 
 I guess the easiest way to show you what you get is to show some scenarios.
 
-* [Opening Page](opening.md)
-* [Create and look into a single simple document](single.md)
-* [Edit the document and compare](compare.md)
-* [Aggregate groups of documents](aggregate.md)
+* [Opening Page](opening.html)
+* [Create and look into a single simple document](single.html)
+* [Edit the document and compare](compare.hmtl)
+* [Aggregate groups of documents](aggregate.html)
 
 #### Is this thing being used anywhere?
 It is being used by your truly as the basis for a post graduate research project at [Curtin University](http://cs.curtin.edu.au/). And I will be applying it to the [Apache Corinthia](http://corinthia.incubator.apache.org/) development.

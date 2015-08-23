@@ -7,21 +7,22 @@ title: XPath Graph
 
 The full XPath Graph contained within the column of this page is below.
 This just shows how wide and shallow the tree is.
-Here is a link to [the full image](/images/xpathgraph.svg).
+Here is a link to [the full image](images/xpathgraph.svg).
 Hovering over an element will show a tooltip with its properties (at least those that fit into the tooltip - may have to work on that).
+![filtered](images/xpathgraph.svg)
 
 The ODF Explorer presents the graph within its framework and provides a mechanism to filter out sections ot the tree.
 To hide a section click on a node and it will be added to the filter list.
 
 Here is a filtered view to show the elements below the document_content/body/text.
 
-![filtered](/images/test1DocFilteredContent.png)
+![filtered](images/test1DocFilteredContent.png)
 
 ### Where do the numbers come from?
 
 In order to understand the numbers lets peek into the XML.
 
-![contentXML](/images/test1DocParaXML.png)
+![contentXML](images/test1DocParaXML.png)
 
 There is one path to the heading.
 There are two paths the end in a text:p.

@@ -12,7 +12,7 @@ The properties applied to a paragraph are the aggregate of those seen when walki
 The green entries in the drill down show the styles used with the document.
 Typically many more styles are defined than are actually used.
 
-![styles](/images/test1DocStyles.png)
+![styles](images/test1DocStyles.png)
 
 
 
