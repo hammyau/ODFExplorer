@@ -17,7 +17,7 @@ The server was created to provide a graphical framework (I\'m not a GUI designer
 
 I guess the easiest way to show you what you get is to show some scenarios.
 
-* [Opening Page](opening.html)
+* [Opening Page](opening.md)
 * [Create and look into a single simple document](single.html)
 * [Edit the document and compare](compare.html)
 * [Aggregate groups of documents](aggregate.html)
