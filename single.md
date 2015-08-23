@@ -9,7 +9,7 @@ But you could equally use [LibreOffice](https://www.libreoffice.org/) or [Callig
 
 My simple test document is looks like.
 
-![opening](/images/test1Doc.png)
+![opening](images/test1Doc.png)
 
 As you can see not very interesting.
 
@@ -19,7 +19,7 @@ To process the document, from the main screen click on the "Select and set optio
 
 Enter a comment maybe. And via the green Choose button and the corresponing file chooser select your file.
 
-![opening](/images/test1DocInput.png)
+![opening](images/test1DocInput.png)
 
 Hit the submit button.
 
@@ -29,13 +29,13 @@ You will end up back at the top page.
 
 Select the Single Document Reports
 
-![opening](/images/test1DocSingle.png)
+![opening](images/test1DocSingle.png)
 
 There it is. Click on it to get the Details.
 
 ### Details
 
-![opening](/images/test1DocDetails.png)
+![opening]images/test1DocDetails.png)
 
 There is some info about this run of the document and a summary of the tree of elements that make up the document.
 63 paths with an average depth of 5. Typically documents form wide and shallow trees.
@@ -49,12 +49,12 @@ Click on the run.
 
 So your now at the page which allows you to examine the innards of the document structure.
 
-![opening](/images/test1DocExtract.png)
+![opening](images/test1DocExtract.png)
 
 
 There are four reports you can select
 
-* [Namespace Gauges](NamespacesSingle.md)
-* [Style Families](StyleFamiliesSingle.md)
-* [XPath Table](XPathTableSingle.md)
-* [XPath Graph](XPathGraphSingle.md)
+* [Namespace Gauges](NamespacesSingle.html)
+* [Style Families](StyleFamiliesSingle.html)
+* [XPath Table](XPathTableSingle.html)
+* [XPath Graph](XPathGraphSingle.html)
