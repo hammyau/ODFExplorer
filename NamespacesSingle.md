@@ -13,11 +13,11 @@ The resulting summary table for our simple document is below.
 
 ![opening](/images/test1DocNSSummary.png)
 
-We can see we have \"hit\" elements from the dc, office, meta, styles, and text namespaces.
+We can see we have "hit" elements from the dc, office, meta, styles, and text namespaces.
 
 ### Drilldown
 
-Of course you may well wonder which elements were \"hit\".
+Of course you may well wonder which elements were "hit".
 
 The Drilldown table allows you to select elements and the attributes within an element.
 

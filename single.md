@@ -4,7 +4,7 @@ title: Opening
 ---
 ### Create a document
 
-Let\'s create a simple document. To do this I\'m going to use [Apache OpenOffice](https://www.openoffice.org/)
+Let's create a simple document. To do this I'm going to use [Apache OpenOffice](https://www.openoffice.org/)
 But you could equally use [LibreOffice](https://www.libreoffice.org/) or [Calligra](https://www.calligra.org/)
 
 My simple test document is looks like.
@@ -15,7 +15,7 @@ As you can see not very interesting.
 
 ### Process the document
 
-To process the document, from the main screen click on the \"Select and set options\"
+To process the document, from the main screen click on the "Select and set options"
 
 Enter a comment maybe. And via the green Choose button and the corresponing file chooser select your file.
 

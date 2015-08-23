@@ -4,7 +4,7 @@ title: XPath Drill Down
 ---
 ### XPath Drill Down
 
-The underlying data displayed here is the same as used in the [XPath Graph](XPathGraphSingle.html)
+The underlying data displayed here is the same as used in the [XPath Graph](XPathGraphSingle.md)
 
 The view shows the drill down to the elements under the document/body/text.
 

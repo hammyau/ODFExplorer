@@ -9,7 +9,6 @@ The full XPath Graph contained within the column of this page is below.
 This just shows how wide and shallow the tree is.
 Here is a link to [the full image](/images/xpathgraph.svg).
 Hovering over an element will show a tooltip with its properties (at least those that fit into the tooltip - may have to work on that).
-![xpathgraphfull](/images/xpathgraph.svg)
 
 The ODF Explorer presents the graph within its framework and provides a mechanism to filter out sections ot the tree.
 To hide a section click on a node and it will be added to the filter list.
@@ -33,7 +32,7 @@ This is how the original document with its heading and three paragraphs, one wit
 ### What to the names mean?
 
 The element names are of the form namespace:element.
-For paragraphs and headings the associated style is in paranthesis \... para(style).
+For paragraphs and headings the associated style is in paranthesis ... para(style).
 
 ### What do the colours signify?
 
