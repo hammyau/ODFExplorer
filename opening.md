@@ -4,7 +4,7 @@ title: Opening
 ---
 ### The Opening Screen
 
-![opening](/images/intro.png)
+![opening](images/intro.png)
 
 I told you I wasn't a graphics designer, thank heavens for [Bootstrap](http://getbootstrap.com/).
 From here you can
