@@ -6,7 +6,7 @@ title: Info
 
 Your info page should look something like\...
 
-![info](/images/odfeinfo.png)
+![info](images/odfeinfo.png)
 
 On Windows it may look slightly different because the list of associated jar files may be longer.
 
