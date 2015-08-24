@@ -20,7 +20,7 @@ Here is a filtered view to show the elements below the document_content/body/tex
 
 ### Where do the numbers come from?
 
-In order to understand the numbers lets peek into the XML.
+In order to understand the numbers let's peek into the XML.
 
 ![contentXML](images/test1DocParaXML.png)
 
