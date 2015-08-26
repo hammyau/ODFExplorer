@@ -97,9 +97,9 @@ odfeControllers.controller('ODFEGaugesCtrl', ['$scope', '$routeParams', '$http',
     $scope.getCursor = function(ndx) {
       var offset = $scope.namespaces[0].elementsHit.length - $scope.sources.length;
       if(ndx == $scope.summaryStart -offset) {
-	return "text-success";
+	return "bg-success";
       } else if (ndx== $scope.summaryEnd - offset) {
-	return "text-warning";
+	return "bg-danger";
       }
     }
 
