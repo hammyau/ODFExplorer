@@ -10,14 +10,24 @@ I have extracted some test documents from [Apache OpenOffice](https://www.openof
 
 ### Aggregate a group or one
 
-I'll get the picture soon...
+In this first iteration I am using a number of spreadsheet documents. The selection screen is shown below.
 
-### Not the same option of reports
+![AOOspread](images/AOOspreads1.png)
 
-Aggregating the style families over a number of documents doesn't realy make sense. So the style family report does not work.
+### Report options are not the same
 
-Genertating XPath graphs based on the aggregates of elements doesn't really make sense either. In the single case a path to a paragraph element is defined taking into account its attributes (style name). For aggregation we are just interested in general how the elements are connected.
+Aggregating the style families over a number of documents doesn't realy make sense. So the style family report is disabled. For the moment it still shows up on the extract page but there is nothing under it.
 
-This makes for far few paths.
+Genertating XPath graphs based on the aggregates of elements needs to be handled differently. In the single case a path to a paragraph element is defined taking into account its attributes (style name for one). For aggregation we are just interested in general how the elements are connected.
 
-details to come...
+This makes for far few paths. In fact the single document case has the oprion of ignoring the attributes when generating the paths graph too.
+
+So the reports that make sense to look at are
+
+* [Namespace Gauges](NamespacesAgg.html)
+
+Before looking at the other reports I am going to perform another iteration. That is an aggregation run on the existing AOO.
+I'm using a couple more spreadsheet documents.
+
+* The XPath Table is much the same as in previous cases.
+* [XPath Graph](XPathGraphAgg.html)

@@ -15,15 +15,24 @@ The ODF Explorer is in two main pieces, the node.js based web server that is thi
 
 The server was created to provide a graphical framework (I'm not a GUI designer) in which to run the command line tool and to examine the results. The details of the command line tool will be captured in an associated Github project real soon now :-)
 
-I guess the easiest way to show you what you get is to show some scenarios.
+I guess the easiest way to show you what you get is to show some scenarios. Best to look through them in the order below.
 
 * [Opening Page](opening.html)
 * [Create and look into a single simple document](single.html)
 * [Edit the document and compare](compare.html)
 * [Aggregate groups of documents](aggregate.html)
 
+That should give you a feel for what the thing does.
+
 #### Is this thing being used anywhere?
 It is being used by yours truly as the basis for a post graduate research project at [Curtin University](http://cs.curtin.edu.au/). And I will be applying it to the [Apache Corinthia](http://corinthia.incubator.apache.org/) development.
 
 #### Okay I'm interested how do I get to use it?
 Clone the project and follow the destructions in the readme. Or download the release and do the same.
+
+#### Can I help?
+Absolutely, clone the project and push back suggestions.
+
+#### What if I find and issue/bug/suggestion?
+
+There is a GitHub associated issues page available. Not sure on the details of how it works. I guess I will see.
