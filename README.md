@@ -21,7 +21,7 @@ The tool also uses Graphviz to generate graphs. It can installed from http://www
 Download this code once you have node, bower, Java, and Grpahviz (optional but you will not be able to generate the graphs if you don't have it available on your command line).
 Using a command line window change directory to your code base and enter
 ```
-node install
+npm install
 ```
 This will fetch the node_modules required
 
