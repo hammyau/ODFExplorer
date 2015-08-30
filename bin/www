@@ -6,4 +6,5 @@ server.set('port', process.env.PORT || 3000);
 
 var server = server.listen(server.get('port'), function() {
   console.log('Express server listening on port ' + server.address().port);
+  console.log('Please visit http://localhost:' + server.address().port + '/app/index.html');
 });
