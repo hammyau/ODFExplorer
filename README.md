@@ -31,6 +31,13 @@ gulp
 ```
 This will fetch angular.js bootstrap, d3, and the required jars from the release.
 
+When I ran this on Windows it didn't directy work. Fixed with...
+```
+npm install -g gulp
+```
+
+Not sure why I needed that. Local path not updated?
+
 ###Make it run
 To start the http server from a command line change directory to the code root and enter
 ```
