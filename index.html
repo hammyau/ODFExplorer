@@ -20,23 +20,23 @@
 
     <section class="main-content">
       <h3>
-<a id="odf-explorer" class="anchor" href="#odf-explorer" aria-hidden="true"><span class="octicon octicon-link"></span></a>ODF Explorer</h3>
+<a id="odf-explorer" class="anchor" href="#odf-explorer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ODF Explorer</h3>
 
 <p>The ODF Explorer allows a user to see how much of the underlying ODF <a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office">schema</a> is used by a document or set of documents. See the Readme in the download or code base of this project to jump straight in.</p>
 
 <h4>
-<a id="why-would-i-want-an-odf-explorer" class="anchor" href="#why-would-i-want-an-odf-explorer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why would I want an ODF Explorer?</h4>
+<a id="why-would-i-want-an-odf-explorer" class="anchor" href="#why-would-i-want-an-odf-explorer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why would I want an ODF Explorer?</h4>
 
 <p>As a developer or tester of an ODF application you want to know if your beast is dealing with all the features and combinations that can be thrown at it. Most testing is done on "the road most travelled" and rightly so. But the trouble starts and error cases occur when a user travels down a branch not seen before. That's where this tool can come in handy.</p>
 
 <p>Most developers and testers have heard of, or even used, code coverage analysis tools. The ODF Explorer is an example of a Production Coverage analysis tool. In code coverage, test cases are run and the code used as to run the tests is highlighted. And in practice the interesting thing is not always what has been exercised, it is what has been missed that you pay attention too. That suggests new test cases. So it is with Production Coverage, except we are not examining the code, we are examining how much of the schema (or grammar) of the system is being tested. And again it is often more interesting to see what is not being tested that is important. When we examine the results we can for instance see that we do not test bookmarks, or some feature of bookmarking. Or that we never use a particular attribute of an element.</p>
 
 <h4>
-<a id="what-do-i-get-for-investing-my-time-here" class="anchor" href="#what-do-i-get-for-investing-my-time-here" aria-hidden="true"><span class="octicon octicon-link"></span></a>What do I get for investing my time here?</h4>
+<a id="what-do-i-get-for-investing-my-time-here" class="anchor" href="#what-do-i-get-for-investing-my-time-here" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What do I get for investing my time here?</h4>
 
 <p>The ODF Explorer is in two main pieces, the node.js based web server that is this project, and the Java command line application that does the actual trolling through the documents and spitting out JSON and dot files.</p>
 
-<p>The server was created to provide a graphical framework (I'm not a GUI designer) in which to run the command line tool and to examine the results. The details of the command line tool will be captured in an associated Github project real soon now :-)</p>
+<p>The server was created to provide a graphical framework (I'm not a GUI designer) in which to run the command line tool and to examine the results. The code for the command line tool can be seen under the mvn subdirectory.</p>
 
 <p>I guess the easiest way to show you what you get is to show some scenarios. Best to look through them in the order below.</p>
 
@@ -50,28 +50,28 @@
 <p>Hopefully that should be enough to give you the gist of what the tool can do. Raise issues if there questions.</p>
 
 <h4>
-<a id="will-it-run-on-my-machine" class="anchor" href="#will-it-run-on-my-machine" aria-hidden="true"><span class="octicon octicon-link"></span></a>Will it run on my machine?</h4>
+<a id="will-it-run-on-my-machine" class="anchor" href="#will-it-run-on-my-machine" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Will it run on my machine?</h4>
 
 <p>The thing is Java and Javascript so should run on any platform with a recent Java installed. I run mostly on Linux and Windows sometimes. See the main GitHub page <a href="https://github.com/hammyau/ODFExplorer">ODF Explorer</a> for installation details.</p>
 
 <h4>
-<a id="is-this-thing-being-used-anywhere" class="anchor" href="#is-this-thing-being-used-anywhere" aria-hidden="true"><span class="octicon octicon-link"></span></a>Is this thing being used anywhere?</h4>
+<a id="is-this-thing-being-used-anywhere" class="anchor" href="#is-this-thing-being-used-anywhere" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Is this thing being used anywhere?</h4>
 
 <p>It is being used by yours truly as the basis for a post graduate research project at <a href="http://cs.curtin.edu.au/">Curtin University</a>. And I will be applying it to the <a href="http://corinthia.incubator.apache.org/">Apache Corinthia</a> development.</p>
 
 <h4>
-<a id="okay-im-interested-how-do-i-get-to-use-it" class="anchor" href="#okay-im-interested-how-do-i-get-to-use-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Okay I'm interested how do I get to use it?</h4>
+<a id="okay-im-interested-how-do-i-get-to-use-it" class="anchor" href="#okay-im-interested-how-do-i-get-to-use-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Okay I'm interested how do I get to use it?</h4>
 
 <p>Clone the project and follow the instructions in the readme. Or download the release and do the same.
 The release is there to capture the first cut and provide a vehicle for the jars needed. Clone the project for the latest version.</p>
 
 <h4>
-<a id="can-i-help" class="anchor" href="#can-i-help" aria-hidden="true"><span class="octicon octicon-link"></span></a>Can I help?</h4>
+<a id="can-i-help" class="anchor" href="#can-i-help" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Can I help?</h4>
 
 <p>Absolutely, clone the project and push back suggestions.</p>
 
 <h4>
-<a id="what-if-i-find-an-issuebugsuggestion" class="anchor" href="#what-if-i-find-an-issuebugsuggestion" aria-hidden="true"><span class="octicon octicon-link"></span></a>What if I find an issue/bug/suggestion?</h4>
+<a id="what-if-i-find-an-issuebugsuggestion" class="anchor" href="#what-if-i-find-an-issuebugsuggestion" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What if I find an issue/bug/suggestion?</h4>
 
 <p>There is a GitHub associated <a href="https://github.com/hammyau/ODFExplorer/issues">Issues</a> page available. Not sure on the details of how it works. I guess I will see.</p>
 
