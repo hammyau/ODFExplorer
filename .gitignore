@@ -7,5 +7,6 @@ public/app/records/*
 odfe_lib/*
 *.swp
 *.log
-input/*
+*.odt
 *.jar
+mvn/target/*
