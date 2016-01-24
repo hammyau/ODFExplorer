@@ -1,5 +1,5 @@
 ### ODF Explorer
-The ODF Explorer provides allows a user to see how much of the underlying ODF [schema](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office) is used by a document or set of documents.
+The ODF Explorer allows a user to see how much of the underlying ODF [schema](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office) is used by a document or set of documents.
 
 A user can also 
 * compare documents - with respect to their schema use
@@ -13,36 +13,27 @@ Before you can get the stuff to run you need
 * node.js - see https://nodejs.org/download/
 * bower - see http://bower.io/
 
-To run the underlying ODF Explorer, which is a Java application, you need to have Java installed.
+To build the underlying ODF Explorer, which is a Java application, you need to have both [Maven](https://maven.apache.org/) and Java installed.
 
 The tool also uses Graphviz to generate graphs. It can installed from http://www.graphviz.org/Download.php
 
 ###Installation
-Download this code once you have node, bower, Java, and Grpahviz (optional but you will not be able to generate the graphs if you don't have it available on your command line).
+Download this code once you have node, Java, Maven, and Grpahviz (optional but you will not be able to generate the graphs if you don't have it available on your command line).
 Using a command line window change directory to your code base and enter
 ```
 npm install
 ```
-This will fetch the node_modules required
-
-To get the rest of the required bits and pieces enter
-```
-gulp
-```
-This will fetch angular.js bootstrap, d3, and the required jars from the release.
-
-When I ran this on Windows it didn't directy work. Fixed with...
-```
-npm install -g gulp
-```
-
-Not sure why I needed that. Local path not updated?
+This will fetch the node_modules required.
 
 ###Make it run
 To start the http server from a command line change directory to the code root and enter
 ```
 npm start
 ```
+
+This will build the Java application via Maven on the first run and start the server.
+
+Subsequently it will just start the server.
 
 You will see a message  
 ```
@@ -53,6 +44,9 @@ Open a Chrome or Firefox web browser. Windows Explorer will just lead to a world
 I've not seen how it runs on a Mac.
 
 Go to the url localhost:3000/app/index.html (which I can't make show up as a link here)
+
+There is a simple test HelloWorld document located in the testDoc directory to play with.
+Submit it and see the kind of results you can get.
 
 Click on the red ODFE Info button to check you have the jar.  
 Click on the green "What is this?" button to learn more.  

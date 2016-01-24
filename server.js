@@ -44,27 +44,35 @@ var os = require('os');
 var fs = require('fs');
 
 // See if we have the required jar file
-// if not use maven to build it
+// if not use maven to build it before starting the server
+fs.stat("odfe.jar", odfeJar);
 
-try{
-    fs.statSync("odfe.jar");
-}catch(err){
-    if(err.code == 'ENOENT') { // does not exist so 
-        console.log("No executable jar found so going to maven it\n");
-        var mvn = require('maven').create({
-            cwd: './mvn'
-        });
-        mvn.execute(['clean', 'package'], { 'skipTests': true });
-        console.log("Now going to copy it to the desired location\n");
-        //ok this is a major hack because doesn't cater for maven failing.
-        //but the server will stop with a nasty error message anyway
-        fs.createReadStream('mvn/target/ODFE-0.0.1-SNAPSHOT-jar-with-dependencies.jar').pipe(fs.createWriteStream('odfe.jar'));
-    }
+
+function odfeJar(err, stats) {
+  if(err != null) {
+    console.log("No executable jar found so going to maven it\n");
+    var mvn = require('maven').create({
+	cwd: './mvn'
+    });
+    mvn.execute(['clean', 'package'], { 'skipTests': true }).then(function(result) {
+      odfeBuilt = true;
+      console.log("Now going to copy it to the desired location\n");
+      //ok this is a major hack because doesn't cater for maven failing.
+      //but the server will stop with a nasty error message anyway
+      fs.createReadStream('mvn/target/ODFE-0.0.1-SNAPSHOT-jar-with-dependencies.jar').pipe(fs.createWriteStream('odfe.jar'));
+      startServer();
+    }, function(err) {
+      console.log("Maven Error\n" + err);
+    });
+  } else {
+      startServer();
+  }
 }
 
+var server  = express();
 
+function startServer() {
 
-var server = express();
 
 var odfFile = "";
 
@@ -326,6 +334,7 @@ server.use(function(err, req, res, next) {
         error: {}
     });
 });
+}
 
 
 var runodfe = function(cmdArgs, res, from, doc, extract) {
