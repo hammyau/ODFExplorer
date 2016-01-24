@@ -43,6 +43,27 @@ var inspect = require('util').inspect;
 var os = require('os');
 var fs = require('fs');
 
+// See if we have the required jar file
+// if not use maven to build it
+
+try{
+    fs.statSync("odfe.jar");
+}catch(err){
+    if(err.code == 'ENOENT') { // does not exist so 
+        console.log("No executable jar found so going to maven it\n");
+        var mvn = require('maven').create({
+            cwd: './mvn'
+        });
+        mvn.execute(['clean', 'package'], { 'skipTests': true });
+        console.log("Now going to copy it to the desired location\n");
+        //ok this is a major hack because doesn't cater for maven failing.
+        //but the server will stop with a nasty error message anyway
+        fs.createReadStream('mvn/target/ODFE-0.0.1-SNAPSHOT-jar-with-dependencies.jar').pipe(fs.createWriteStream('odfe.jar'));
+    }
+}
+
+
+
 var server = express();
 
 var odfFile = "";
