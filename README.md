@@ -15,10 +15,10 @@ Before you can get the stuff to run you need
 
 To build the underlying ODF Explorer, which is a Java application, you need to have both [Maven](https://maven.apache.org/) and Java installed.
 
-The tool also uses Graphviz to generate graphs. It can installed from http://www.graphviz.org/Download.php
+The tool also uses Graphviz to generate graphs. It can installed be from http://www.graphviz.org/Download.php
 
 ###Installation
-Download this code once you have node, Java, Maven, and Grpahviz (optional but you will not be able to generate the graphs if you don't have it available on your command line).
+Clone this code, once you have NodeJS, Java, Maven, and Grpahviz (optional but you will not be able to generate the graphs if you don't have it available on your command line).
 Using a command line window change directory to your code base and enter
 ```
 npm install
@@ -26,12 +26,12 @@ npm install
 This will fetch the node_modules required.
 
 ###Make it run
-To start the http server from a command line change directory to the code root and enter
+To start the http server type
 ```
 npm start
 ```
 
-This will build the Java application via Maven on the first run and start the server.
+This will build the Java application using Maven on the first run and start the server.
 
 Subsequently it will just start the server.
 
