@@ -47,6 +47,7 @@ var fs = require('fs');
 // if not use maven to build it before starting the server
 fs.stat("odfe.jar", odfeJar);
 
+var server  = express();
 
 function odfeJar(err, stats) {
   if(err != null) {
@@ -57,11 +58,12 @@ function odfeJar(err, stats) {
     mvn.execute(['clean', 'package'], { 'skipTests': true }).then(function(result) {
       odfeBuilt = true;
       console.log("Now going to copy it to the desired location\n");
+      console.log('Please visit http://localhost:3000/app/index.html');
       //ok this is a major hack because doesn't cater for maven failing.
       //but the server will stop with a nasty error message anyway
       fs.createReadStream('mvn/target/ODFE-0.0.1-SNAPSHOT-jar-with-dependencies.jar').pipe(fs.createWriteStream('odfe.jar'));
       startServer();
-    }, function(err) {
+   }, function(err) {
       console.log("Maven Error\n" + err);
     });
   } else {
@@ -69,9 +71,10 @@ function odfeJar(err, stats) {
   }
 }
 
-var server  = express();
 
 function startServer() {
+
+  console.log('Setting up the server');
 
 
 var odfFile = "";
