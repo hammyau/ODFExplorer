@@ -7,7 +7,7 @@ title: Opening
 ![opening](images/intro.png)
 
 I told you I wasn't a graphics designer, thank heavens for [Bootstrap](http://getbootstrap.com/).
-From here you can
+From here you can do the following
 
 * Check the ODF build information - [red button on the title bar](info.html)
 * Get help - green and orange buttons on the title bar
